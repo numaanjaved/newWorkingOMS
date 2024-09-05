@@ -1,0 +1,13 @@
+{
+    "style": "style=padding-top:25px;padding-bottom:8px;",
+    "bg-phone": "bg-phone-pic-en.png",
+    "order-now": "Order Now",
+    "css": "yaa.css",
+    "opposite-navbar-language-svg": "arabic-lang.svg",
+    "opposite-navbar-symbol-language-svg": "AR.svg",
+    "opposite-language-symbol": "AR",
+    "dir": "",
+    "text-align-right": "style=text-align:right;",
+    "direction-align": "",
+    "dt_url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json"
+}
