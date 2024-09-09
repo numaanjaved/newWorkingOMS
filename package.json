@@ -6,8 +6,43 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@popperjs/core": "^2.11.6",
         "axios": "^1.6.4",
+        "bootstrap": "^5.2.3",
         "laravel-vite-plugin": "^1.0.0",
+        "sass": "^1.56.1",
         "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "@selectize/selectize": "^0.15.2",
+        "auth": "^1.1.1",
+        "bootstrap-daterangepicker": "^3.1.0",
+        "bootstrap-datetimepicker": "^0.0.7",
+        "bootstrap-progressbar": "^0.9.0",
+        "chartjs": "^0.3.24",
+        "datatables.net": "^2.1.5",
+        "datatables.net-buttons": "^3.1.2",
+        "date.js": "^0.3.3",
+        "datejs": "^1.0.0-rc3",
+        "fastclick": "^1.0.6",
+        "flot-orderbars": "^1.0.0",
+        "flot-spline": "^0.0.1",
+        "flot.curvedlines": "^1.1.1",
+        "font-awesome": "^4.7.0",
+        "fortawesome": "^0.0.1-security",
+        "gauge": "^5.0.2",
+        "icheck": "^1.0.2",
+        "jquery": "^3.7.1",
+        "jquery.flot": "^0.8.3",
+        "jqvmap": "^1.0.1",
+        "jspdf": "^2.5.1",
+        "jszip": "^3.10.1",
+        "moment": "^2.30.1",
+        "multiselect": "^0.9.12",
+        "nprogress": "^0.2.0",
+        "pdfmake": "^0.2.12",
+        "raphael": "^2.3.0",
+        "skycons": "^1.0.0",
+        "ui": "^0.2.4"
     }
 }
