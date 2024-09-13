@@ -7,7 +7,7 @@ $("#delivery_channels").on('change', function () {
     window.location.replace("" + '/' + channel_id);
 });
 
-jQuery(document).ready(function () {
+jQuery(function () {
     // moment.tz.setDefault("Asia/Riyadh");
     $("#autogenerate").on('click', function () {
         var autopromo = autogenerate();

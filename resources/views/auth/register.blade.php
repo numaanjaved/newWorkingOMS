@@ -1,5 +1,25 @@
-@extends('layouts.app')
+@extends('layouts.master')
+@section('title')
+    {{ __('Yaa Food') }}
+@endsection
+@section('stylesheetAndScripts')
 
+@endsection
+@section('style')
+    @if(App::isLocale('en'))
+        @vite(['resources/js/yaa.js'])
+    @elseif(App::isLocale('ar'))
+        @vite(['resources/js/yaa_rtl.js'])
+    @endif
+    @vite(['resources/js/costumer-portal.js'])
+@endsection
+@section('meta')
+@if(isset($page_check))
+    <meta name="title" content="Yaa Foods {{(isset($page['seo_title']))?$page['seo_title']: 'Yaa Foods, Yaa Foods'}}" />
+    <meta name="description" content="Yaa Foods {{(isset($page['seo_description']))?$page['seo_description']: 'Yaa Foods, Yaa Foods'}}">
+    <meta name="keywords" content="Yaa Foods {{(isset($page['meta_tags']))?$page['meta_tags']: 'Yaa Foods, Yaa Foods'}}">
+@endif
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

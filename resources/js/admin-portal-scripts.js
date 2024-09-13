@@ -35,10 +35,10 @@ import './custom';
 import 'multiselect/js/jquery.multi-select'
 import './select2.min'
 
-import './admin-portal/main1'
-import './admin-portal/main2'
-import './admin-portal/init'
+// import './admin-portal/main1'
+// import './admin-portal/main2'
+// import './admin-portal/init'
 import '@selectize/selectize/dist/js/selectize.min'
 import '@selectize/selectize/dist/css/selectize.bootstrap3.css'
-import './admin-portal/main3'
+// import './admin-portal/main3'
 

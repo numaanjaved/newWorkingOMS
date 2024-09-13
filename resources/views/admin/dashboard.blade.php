@@ -10,15 +10,16 @@
 
 @endsection
 @section('stylesheetAndScripts')
-    @vite(['resources/js/admin-portal.js'])
+
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-    @if(App::isLocale('en'))
+    @vite(['resources/js/admin-portal.js'])
+    {{-- @if(App::isLocale('en'))
         @vite(['resources/js/yaa.js'])
     @elseif(App::isLocale('ar'))
         @vite(['resources/js/yaa_rtl.js'])
-    @endif
+    @endif --}}
+
 
 @endsection
 @section('content')
@@ -27,7 +28,7 @@
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0; background-color: #fff">
-                            <a href="index.html" class="site_title text-d-green"> <img src="{{ asset('images/YaaLogo.svg') }}" alt="" height="25"> <span>{{__('YaaFood')}}</span></a>
+                            <a href="" class="site_title text-d-green"> <img src="{{ asset('images/YaaLogo.svg') }}" alt="" height="25"> <span>{{__('YaaFood')}}</span></a>
                         </div>
 
                         <div class="clearfix"></div>

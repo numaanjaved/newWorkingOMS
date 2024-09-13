@@ -13,7 +13,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $roles = \App\Models\Role::where('status', 1)->get()->toArray();
+        $roles = json_encode($roles);
+        return view('admin.dashboard', [
+            'roles' => $roles,
+        ]);
     }
 
     /**

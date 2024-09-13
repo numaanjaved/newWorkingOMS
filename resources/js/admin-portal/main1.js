@@ -1,5 +1,5 @@
 
-jQuery("a.action").click(function (event) {
+jQuery("a.action").on('click', function (event) {
     event.stopPropagation();
     event.stopImmediatePropagation();
     var proceed = confirm("Are you sure you want to " + jQuery(this).attr('rel') + " this record?");
@@ -12,7 +12,7 @@ jQuery("a.action").click(function (event) {
     }
 });
 
-jQuery("a.status").click(function (event) {
+jQuery("a.status").on('click', function (event) {
     event.stopPropagation();
     event.stopImmediatePropagation();
     var proceed = confirm("{{ __('Are you sure you want to change status?') }}");
@@ -29,7 +29,7 @@ gallery_product_id = jQuery("input[name=product_id]").val()
 if (typeof gallery_product_id == 'undefined') {
     gallery_product_id = Math.floor(100000 + Math.random() * 900000);
 }
-jQuery(document).ready(function () {
+jQuery(function () {
 
     jQuery('input#product-image').change(function () {
         // $('#loading').show();
@@ -116,7 +116,7 @@ function getProductGallery(gallery_product_id) {
             jQuery('.product-gallery').html(data);
 
 
-            jQuery(".action-makedefault").click(function (event) {
+            jQuery(".action-makedefault").on('click', function (event) {
                 event.stopPropagation();
                 console.log("making default...!");
                 product_gallery_id = jQuery(this).closest('.item').attr('productGalleryId');
@@ -132,7 +132,7 @@ function getProductGallery(gallery_product_id) {
                 return false;
             });
 
-            jQuery(".action-delete").click(function (event) {
+            jQuery(".action-delete").on('click', function (event) {
                 //console.log(jQuery(this).closest('.item'));
                 event.stopPropagation();
                 product_gallery_id = jQuery(this).closest('.item').attr('productGalleryId');

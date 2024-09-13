@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,7 @@ use App\Http\Controllers\AdminController;
 */
 
 
-Route::get('/', [BasicController::class, "index"])->name('index');
+Route::get('/', [BasicController::class, "index"])->name('index')->middleware('auth');
 Route::get('language/{locale}', [LocaleController::class, "index"])->name('language.switcher');
 
 
@@ -32,4 +34,6 @@ Route::get('/about-us', [AboutController::class,'index'])->name('about');
 Route::get('/contact-us', [ContactController::class,'index'])->name('contact');
 
 Route::get('Lgadmg', [AdminController::class,'index'])->name('admin.index');
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('customer.login');
+Route::get('register', [RegisterController::class, 'showRegisterForm'])->name('customer.register');
 

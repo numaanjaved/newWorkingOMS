@@ -1,4 +1,4 @@
-$("#auto_generate").click(function () {
+$("#auto_generate").on('click', function () {
     //route('admin.ajax.autogenerate')
     $.ajax({
         url: "", success: function (result) {
@@ -21,14 +21,9 @@ $(function () {
 
     });
 });
-
-init("<?php if(isset($to)){echo date('m/d/Y g:i A', strtotime($to));} else ''; ?>");
-// function init() {
-//   // Clear forms here
-//   //	document.getElementById("start_date").value = "<?php if(isset($start_date)){echo date('m/d/Y g:i A', strtotime($start_date));} else ''; ?>";
-//   document.getElementById("to").value = "<?php if(isset($to)){echo date('m/d/Y g:i A', strtotime($to));} else ''; ?>";
-// }
-window.onload = init;
+// value = "<?php if(isset($to)){echo date('m/d/Y g:i A', strtotime($to));} else ''; ?>";
+// init(value);
+// window.onload = init;
 
 $(function () {
     $("#generate_promo").keyup(function () {
@@ -39,34 +34,34 @@ $(function () {
 
     });
 });
-$(document).ready(function () {
+$(function () {
     var promo = $("#generate_promo").val();
     if (promo != '') {
         check_promocode(promo);
     }
 });
-$("#all_cities").click(function () {
+$("#all_cities").on('click', function () {
     var allCitiesIsChecked = $('#all_cities:checkbox:checked').length > 0;
     if (allCitiesIsChecked == true) {
         $('.small_anchor').attr('checked', false);
     }
 });
 
-$(".small_anchor").click(function () {
+$(".small_anchor").on('click', function () {
     var allCitiesIsChecked = $('#all_cities:checkbox:checked').length > 0;
     if (allCitiesIsChecked == true) {
         $('#all_cities').attr('checked', false);
     }
 });
 
-$("#all_products").click(function () {
+$("#all_products").on('click', function () {
     var allProductsIsChecked = $('#all_products:checkbox:checked').length > 0;
     if (allProductsIsChecked == true) {
         $('.small_anchor2').attr('checked', false);
     }
 });
 
-$(".small_anchor2").click(function () {
+$(".small_anchor2").on('click', function () {
     var allProductsIsChecked = $('#all_products:checkbox:checked').length > 0;
     if (allProductsIsChecked == true) {
         $('#all_products').attr('checked', false);
@@ -109,7 +104,7 @@ function check_promocode(value) {
 }
 
 //json_encode(\App\Model\Role::where('status', 1)->get()->toArray());
-roles = "";
+roles = "{{ $roles }}";
 
 function displayRole() {
     var defaultPageDropDownHtml = '<option value="">-- Select One --</option>';
@@ -300,7 +295,7 @@ function doNoUncheckGroupRoles(e) {
     }
 }
 
-$('#select_all').click(function () {
+$('#select_all').on('click', function () {
     $('#extra_roles input:checkbox').prop('checked', true);
     $('#channels input:checkbox').prop('checked', true);
 
@@ -322,7 +317,7 @@ $('#select_all').click(function () {
 
 
 
-$('#deselect_all').click(function () {
+$('#deselect_all').on('click', function () {
     $('#extra_roles input:checkbox').removeAttr('checked');
     $('#channels input:checkbox').removeAttr('checked');
 
@@ -332,7 +327,7 @@ $('#deselect_all').click(function () {
 });
 
 
-$('#select_all_lastmile').click(function () {
+$('#select_all_lastmile').on('click', function () {
     $('#extra_roles_lastmile input:checkbox').prop('checked', true);
 
     var currentUrl = "<?php echo (isset($currentUser)? $currentUser['url']: '')?>";
@@ -351,7 +346,7 @@ $('#select_all_lastmile').click(function () {
     $('#default_page').html(html);
 });
 
-$('#deselect_all_lastmile').click(function () {
+$('#deselect_all_lastmile').on('click', function () {
     $('#extra_roles_lastmile input:checkbox').removeAttr('checked');
 
     //get selected value of user group.
@@ -360,7 +355,7 @@ $('#deselect_all_lastmile').click(function () {
 });
 
 
-$('#select_all_callcenter').click(function () {
+$('#select_all_callcenter').on('click', function () {
     $('#extra_roles_callcenter input:checkbox').prop('checked', true);
 
     var currentUrl = "<?php echo (isset($currentUser)? $currentUser['url']: '')?>";
@@ -379,7 +374,7 @@ $('#select_all_callcenter').click(function () {
     $('#default_page').html(html);
 });
 
-$('#deselect_all_callcenter').click(function () {
+$('#deselect_all_callcenter').on('click', function () {
     $('#extra_roles_callcenter input:checkbox').removeAttr('checked');
 
     //get selected value of user group.
@@ -446,11 +441,11 @@ function onDisplayInMenuChanged() {
 
 // $('#my-select').multiSelect()
 $('#public-methods').multiSelect();
-$('#select-all').click(function () {
+$('#select-all').on('click', function () {
     $('#public-methods').multiSelect('select_all');
     return false;
 });
-$('#deselect-all').click(function () {
+$('#deselect-all').on('click', function () {
     $('#public-methods').multiSelect('deselect_all');
     return false;
 });
@@ -614,7 +609,7 @@ function displaySubChannel() {
     });
 };
 
-$(document).ready(function () {
+$(function () {
 
     hide_area();
     hide_group()
@@ -891,7 +886,7 @@ function addCustomerAddress() {
                         // text += "</tr>";
                         document.getElementById("addressCustomer").innerHTML = text;
                         if (window.check == 0) {
-                            $('#address_button').click();
+                            $('#address_button').on('click',);
                             window.check = 1;
                         }
                         Object.keys(window.customerAddress).forEach((key, index) => {
@@ -929,7 +924,7 @@ function addCustomerAddress() {
         // text += "</tr>";
         document.getElementById("addressCustomer").innerHTML = text;
         if (window.check == 0) {
-            $('#address_button').click();
+            $('#address_button').on('click',);
             window.check = 1;
         }
         Object.keys(window.customerAddress).forEach((key, index) => {
@@ -1140,13 +1135,13 @@ $('#pricing_checkbox').change(function () {
         for (var i = 0; i < product.length; i++) {
             product[i].checked = false;
         }
-        $('#product_span').click();
+        $('#product_span').on('click',);
     }
     else {
         $('.channel-prod').show();
         $('.sub-channel-pricing').show();
         // $('#subChannelTable').show();
-        $('#product_span').click();
+        $('#product_span').on('click',);
         for (var i = 0; i < product.length; i++) {
             product[i].checked = false;
         }
@@ -1171,14 +1166,14 @@ $('#sub_channel_pricing_checkbox').change(function () {
         // for (var i = 0; i < product.length; i++) {
         //   product[i].checked = true;
         // }
-        $('#sub_channel_span').click();
+        $('#sub_channel_span').on('click',);
     }
     else {
         $('.channel-prod').show();
         $('.customer-pricing').show();
         // $('#productTable').show();
-        $('#sub_channel_span').click();
-        // $('#product_span').click();
+        $('#sub_channel_span').on('click',);
+        // $('#product_span').on('click',);
         // for (var i = 0; i < product.length; i++) {
         //   product[i].checked = false;
         // }
@@ -1231,7 +1226,7 @@ function customerEdit(event) {
             // $('.channel-prod').show();
             // $('.sub-channel-pricing').show();
             // $('.customer-pricing').show();
-            // $('#product_span').click();
+            // $('#product_span').on('click',);
             for (var i = 0; i < product.length; i++) {
                 product[i].checked = false;
             }
@@ -1256,7 +1251,7 @@ function customerEdit(event) {
             // $('.channel-prod').show();
             // $('.sub-channel-pricing').show();
             // $('.customer-pricing').show();
-            // $('#product_span').click();
+            // $('#product_span').on('click',);
             for (var i = 0; i < product.length; i++) {
                 product[i].checked = false;
             }
@@ -1560,7 +1555,7 @@ function removeVariant(val) {
 
 }
 
-$('#productVariants').find('tr').click(function () {
+$('#productVariants').find('tr').on('click', function () {
     // alert('You clicked row '+ ($(this).index()+1) );
 });
 

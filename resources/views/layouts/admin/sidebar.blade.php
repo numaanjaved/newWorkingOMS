@@ -4,7 +4,8 @@
 
                                 <ul class="nav side-menu">
                                     {{-- route('admin.dashboard') --}}
-                                    <li><a href=""><span class="fa fa-tachometer"></span>{{__('Dashboard')}}</a>
+                                    <li>
+                                        <a href="{{route('admin.index')}}"><span class="fa fa-tachometer"></span>{{__('Dashboard')}}</a>
                                     </li>
 
                                     <li><a>{{__('Oms Configuration')}}<span class="fa fa-chevron-down"></span></a>
