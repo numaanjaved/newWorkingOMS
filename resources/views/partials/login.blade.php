@@ -18,7 +18,7 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a> --}}
                             <div class=nav-item>{{Auth::user()->name}}</div>
-                            <div class=nav-item>
+                            <div class="nav-item">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
