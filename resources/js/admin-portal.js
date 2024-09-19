@@ -1,20 +1,15 @@
-import './app';
-import '../sass/admin/home.scss';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-datetimepicker/src/js/bootstrap-datetimepicker';
-import '../vendors/font-awesome/css/font-awesome.min.css';
-// import 'nprogress/nprogress.css';
-// import 'iCheck/skins/flat/green.css';
-// import 'bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css';
-// import 'jqvmap/jqvmap/jqvmap.css';
-// import 'bootstrap-daterangepicker/daterangepicker.css';
-// import 'multiselect/css/multi-select.css';
-
-import '../css/custom.css';
-
-import '../css/select2.min.css'
 
 
 
+import '../sass/bootstrap/4.5.2/bootstrap.scss'
+import '../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
+import '../vendors/fontawesome/css/font-awesome.min.css'
+import '../vendors/nprogress/nprogress.css'
+import '../vendors/iCheck/skins/flat/green.css'
+import '../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css'
+import '../vendors/jqvmap/dist/jqvmap.min.css'
+import '../vendors/bootstrap-daterangepicker/daterangepicker.css'
+import '../vendors/multi_select/css/multi-select.css'
 
+import '../css/custom.min.css'
+// import '../sass/datatables.net/v/dt/dt-1.10.20/b-1.6.0/datatables.scss'
