@@ -11,13 +11,8 @@
 @endsection
 @section('stylesheetAndScripts')
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     @vite(['resources/js/admin-portal.js'])
-    {{-- @if(App::isLocale('en'))
-        @vite(['resources/js/yaa.js'])
-    @elseif(App::isLocale('ar'))
-        @vite(['resources/js/yaa_rtl.js'])
-    @endif --}}
 
 
 @endsection
