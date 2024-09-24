@@ -1,28 +1,38 @@
 
-import 'datatables.net/js/dataTables.min'
-import 'moment';
-import 'fastclick/lib/fastclick';
-import 'nprogress/nprogress';
-import 'jspdf';
-import 'chartjs';
-import 'raphael';
-// import 'gauge/lib/process';
-// import 'bootstrap-progressbar/bootstrap-progressbar.min';
-// import 'icheck/icheck.min';
-import 'skycons/skycons';
-import 'jquery.flot/jquery.flot';
-import 'jquery.flot/jquery.flot.pie';
-import 'jquery.flot/jquery.flot.time';
-import 'jquery.flot/jquery.flot.stack';
-import 'jquery.flot/jquery.flot.resize';
-import 'flot-orderbars/js/jquery.flot.orderBars';
-import 'flot-spline/js/jquery.flot.spline.min';
-import 'flot.curvedlines/curvedLines';
-import 'date.js/dist/date';
-import 'jqvmap/jqvmap/jquery.vmap';
-import 'jqvmap/jqvmap/maps/jquery.vmap.world';
-import 'jqvmap/jqvmap/data/jquery.vmap.sampledata';
-// import 'moment/min/moment.min';
+
+import '../vendors/jquery/dist/jquery.min'
+import '../vendors/datatables.net/js/jquery.dataTables.min'
+
+
+import '../vendors/bootstrap/dist/js/bootstrap.min'
+
+import '../vendors/fastclick/lib/fastclick';
+
+// import '../vendors/ajax/lib/jspdf/1.3.4/jspdf.min';
+import '../vendors/Chart.js/dist/Chart.min';
+// import '../vendors/raphael/raphael.min';
+import '../vendors/morris.js/morris'
+import '../vendors/gauge.js/dist/gauge.min';
+import '../vendors/bootstrap-progressbar/bootstrap-progressbar.min';
+
+// import '../vendors/skycons/skycons';
+import '../vendors/Flot/jquery.flot';
+import '../vendors/Flot/jquery.flot.pie';
+import '../vendors/Flot/jquery.flot.time';
+import '../vendors/Flot/jquery.flot.stack';
+// import '../vendors/Flot/jquery.flot.resize';
+import '../vendors/flot.orderbars/js/jquery.flot.orderBars';
+import '../vendors/flot-spline/js/jquery.flot.spline.min';
+import '../vendors/flot.curvedlines/curvedLines';
+// import '../vendors/DateJS/build/date';
+import '../vendors/jqvmap/dist/jquery.vmap';
+import '../vendors/jqvmap/dist/maps/jquery.vmap.world';
+import '../vendors/jqvmap/examples/js/jquery.vmap.sampledata';
+// import '../vendors/moment/min/moment.min';
+// import '../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min'
+// import '../vendors/nprogress/nprogress';
+// import '../vendors/iCheck/icheck.min';
+// import '../vendors/skycons/skycons';
 import 'bootstrap-daterangepicker/daterangepicker';
 import 'datatables.net/js/dataTables.min';
 import 'datatables.net-buttons/js/dataTables.buttons.min';

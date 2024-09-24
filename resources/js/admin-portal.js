@@ -11,5 +11,8 @@ import '../vendors/jqvmap/dist/jqvmap.min.css'
 import '../vendors/bootstrap-daterangepicker/daterangepicker.css'
 import '../vendors/multi_select/css/multi-select.css'
 
+// import '../css/custom.min.css'
 import '../css/custom.min.css'
+
+import '../css/admin/yaa.css'
 // import '../sass/datatables.net/v/dt/dt-1.10.20/b-1.6.0/datatables.scss'
