@@ -23,7 +23,7 @@
     <body class="nav-md">
         @yield('content')
         <!-- jQuery -->
-        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         @yield('scriptsBottom')
     </body>
 </html>
